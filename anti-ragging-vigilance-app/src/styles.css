@@ -1,0 +1,94 @@
+body {
+    font-family: 'Archivo Black', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+}
+
+#mapContainer, #sidebarContainer {
+    width: 50%;
+}
+
+#map {
+    height: 90vh;
+    width: 100%;
+}
+
+#sidebar {
+    height: 90vh;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+#buttonContainer {
+    margin: 20px 0;
+}
+
+#usernameSection {
+    margin: 10px;
+}
+
+#username {
+    margin-right: 10px;
+}
+
+#saveUsernameButton, #clearUsernameButton, #sosButton, #startRecordingButton, #stopRecordingButton, #proceedButton {
+    margin: 10px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+#displayUsername {
+    margin: 10px;
+    font-size: 20px;
+}
+
+#sidebar ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.user-in-distress {
+    color: red;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    z-index: 1000;
+}
+
+.popup button {
+    margin: 5px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/* Temporary border for debugging */
+button {
+    border: 1px solid black;
+}

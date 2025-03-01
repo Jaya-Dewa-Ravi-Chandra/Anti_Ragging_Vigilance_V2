@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Anti-Ragging Vigilance App</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="usernameSection">
+        <input type="text" id="username" placeholder="Enter your username">
+        <button id="saveUsernameButton">Save Username</button>
+    </div>
+    <div id="displayUsername"></div>
+    <button id="proceedButton">Proceed to Main Page</button>
+
+    <script>
+        document.getElementById("saveUsernameButton").addEventListener("click", () => {
+            const username = document.getElementById("username").value;
+            if (!username) {
+                alert("Please enter your username.");
+                return;
+            }
+            localStorage.setItem("username", username);
+            displayUsername();
+        });
+
+        document.getElementById("proceedButton").addEventListener("click", () => {
+            const username = localStorage.getItem("username");
+            if (!username) {
+                alert("Please enter your username before proceeding.");
+                return;
+            }
+            window.location.href = "main.html";
+        });
+
+        function displayUsername() {
+            const username = localStorage.getItem("username");
+            if (username) {
+                document.getElementById("usernameSection").style.display = "none";
+                document.getElementById("displayUsername").textContent = `Username: ${username}`;
+            }
+        }
+
+        displayUsername();
+    </script>
+</body>
+</html>

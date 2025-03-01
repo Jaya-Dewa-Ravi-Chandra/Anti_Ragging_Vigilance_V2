@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - Anti-Ragging Vigilance App</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <h1>Welcome to the Main Page</h1>
+    <div id="buttonContainer">
+        <button id="clearUsernameButton">Clear Username</button>
+        <button id="sosButton">SOS</button>
+        <button id="startRecordingButton">Start Recording</button>
+        <button id="stopRecordingButton">Stop Recording</button>
+    </div>
+    <div id="mainContent">
+        <div id="container">
+            <div id="mapContainer">
+                <div id="map"></div>
+            </div>
+            <div id="sidebarContainer">
+                <div id="sidebar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="src/script.js"></script>
+</body>
+</html>
